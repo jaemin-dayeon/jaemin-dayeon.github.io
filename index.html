@@ -42,6 +42,7 @@
 }
 
 </style>
+  <script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=r5os5hgybf&submodules=geocoder"></script>
 </head>
 <body class="home-active">
 <div class="app">
@@ -52,7 +53,7 @@
 <div class="home-secondary"><p>김병기&nbsp; 이양자의&nbsp; 장남&nbsp;&nbsp;<b> 재민</b></p><p>이민성&nbsp; 문영애의&nbsp; 장녀&nbsp;&nbsp;<b> 다연</b></p></div>
 <div class="home-countdown"><span class="home-countdown-label">2026. 12. 05 · SAT · AM 11:10</span><span class="home-countdown-value">더뉴컨벤션 1층 르노브홀</span></div>
 </div></section>
-<section class="page" id="location"><h2 class="page-title">오시는 길</h2><div class="map-card"><div class="map-embed"><iframe src="https://www.openstreetmap.org/export/embed.html?bbox=126.8290%2C37.5545%2C126.8420%2C37.5625&amp;layer=mapnik&amp;marker=37.5585%2C126.8355" loading="lazy" title="더뉴컨벤션 위치 지도"></iframe></div><div class="map-bottom"><h3>더뉴컨벤션 1층 르노브홀</h3>서울 강서구 공항대로36길 57 내발산동 655-2<br>TEL. 1661-3303<b>지하철</b><span class="subway-info">5호선 발산역 하차 7번 출구 도보 2분</span></div></div><div class="btn-row" style="grid-template-columns:1fr 1fr 1fr"><a class="btn dark" target="_blank" href="https://map.kakao.com/link/search/더뉴컨벤션">카카오맵</a><a class="btn" target="_blank" href="https://map.naver.com/v5/search/더뉴컨벤션">네이버맵</a><a class="btn" href="tmap://search?name=더뉴컨벤션">티맵</a></div><div class="line"></div><h2 class="page-title">주차 안내</h2><div class="parking-info"><h3>2시간 무료 주차</h3><p>더뉴컨벤션 B4 ~ F1 주차장 이용<br>약 720대 주차 가능</p></div><div class="parking-list"><div class="parking-item"><b>만차 시</b><p>건너편 이대서울병원 주차장을 이용해 주세요.<br>동일하게 2시간 무료 주차 지원됩니다.</p></div></div></section>
+<section class="page" id="location"><h2 class="page-title">오시는 길</h2><div class="map-card"><div class="map-embed" id="naverMap"></div><div class="map-bottom"><h3>더뉴컨벤션 1층 르노브홀</h3>서울 강서구 공항대로36길 57 내발산동 655-2<br>TEL. 1661-3303<b>지하철</b><span class="subway-info">5호선 발산역 하차 7번 출구 도보 2분</span></div></div><div class="btn-row" style="grid-template-columns:1fr 1fr 1fr"><a class="btn dark" target="_blank" href="https://map.kakao.com/link/search/더뉴컨벤션">카카오맵</a><a class="btn" target="_blank" href="https://map.naver.com/v5/search/더뉴컨벤션">네이버맵</a><a class="btn" href="tmap://search?name=더뉴컨벤션">티맵</a></div><div class="line"></div><h2 class="page-title">주차 안내</h2><div class="parking-info"><h3>2시간 무료 주차</h3><p>더뉴컨벤션 B4 ~ F1 주차장 이용<br>약 720대 주차 가능</p></div><div class="parking-list"><div class="parking-item"><b>만차 시</b><p>건너편 이대서울병원 주차장을 이용해 주세요.<br>동일하게 2시간 무료 주차 지원됩니다.</p></div></div></section>
 <section class="page" id="gallery"><h2 class="page-title">갤러리</h2><div class="coverflow" id="coverflow"><div class="coverflow-track" id="coverflowTrack"></div></div><div class="coverflow-footer"><div class="coverflow-counter" id="coverflowCounter"></div><button class="view-all-link" id="viewAllBtn" onclick="toggleGalleryView()">VIEW ALL →</button></div><div class="gallery-grid" id="galleryGrid" style="display:none"></div></section>
 <section class="page" id="guide"><h2 class="page-title">INFO</h2><div class="guide-grid"><div class="guide-card"><div class="guide-card-head"><div class="guide-card-text"><h3>식사 안내</h3></div></div><div class="guide-card-detail"><p class="guide-detail-text">예식 전 오전 10시 30분부터 3층 연회장에서 식사가 가능합니다.</p></div></div><div class="guide-card"><div class="guide-card-head"><div class="guide-card-text"><h3>주차 안내</h3></div></div><div class="guide-card-detail"><p class="guide-detail-text">더뉴컨벤션 하객은 별도의 차량번호 등록이나 정산 절차 없이 2시간 무료 출차가 가능합니다.<br>만차 시 건너편 이대서울병원 주차장을 이용해 주세요.</p></div></div></div></section>
 <section class="page" id="heart"><h2 class="page-title">마음 전하실 곳</h2><div class="gift-choice"><button class="gift-toggle" onclick="toggleGift('groom')">신랑에게<svg class="guide-chevron" id="groomChevron" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button><div class="gift-panel" id="giftGroom"><div class="gift-row"><div class="gift-who"><b>[신랑 이름]</b><span>[은행명] 000-000-000000</span></div><button class="btn gift-copy" onclick="copyAccount('[은행명] 000-000-000000',this)">복사</button></div></div><button class="gift-toggle" onclick="toggleGift('bride')">신부에게<svg class="guide-chevron" id="brideChevron" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button><div class="gift-panel" id="giftBride"><div class="gift-row"><div class="gift-who"><b>[신부 이름]</b><span>[은행명] 000-000-000000</span></div><button class="btn gift-copy" onclick="copyAccount('[은행명] 000-000-000000',this)">복사</button></div></div></div></section>
@@ -102,6 +103,14 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
     if (id === 'gallery' && window.coverflow) {
       requestAnimationFrame(() => window.coverflow.refresh());
     }
+    if (id === 'location' && window.naver && naver.maps) {
+  setTimeout(() => {
+    const mapEl = document.getElementById('naverMap');
+    if (mapEl) {
+      window.dispatchEvent(new Event('resize'));
+    }
+  }, 100);
+}
   });
 });
 
@@ -377,7 +386,50 @@ function copyAccount(text, btn) {
     alert(text);
   }
 }
+/* 네이버 지도 */
+function initNaverMap() {
+  const mapElement = document.getElementById('naverMap');
+  if (!mapElement || !window.naver || !naver.maps) return;
 
+  naver.maps.Service.geocode(
+    { query: '서울 강서구 공항대로36길 57' },
+    function(status, response) {
+      if (status !== naver.maps.Service.Status.OK) {
+        console.error('네이버 지도 주소 검색 실패');
+        return;
+      }
+
+      const result = response.v2.addresses[0];
+
+      if (!result) {
+        console.error('더뉴컨벤션 주소를 찾지 못했습니다.');
+        return;
+      }
+
+      const position = new naver.maps.LatLng(
+        Number(result.y),
+        Number(result.x)
+      );
+
+      const map = new naver.maps.Map('naverMap', {
+        center: position,
+        zoom: 16,
+        zoomControl: false,
+        mapDataControl: false,
+        scaleControl: false,
+        logoControl: true
+      });
+
+      new naver.maps.Marker({
+        position: position,
+        map: map,
+        title: '더뉴컨벤션'
+      });
+    }
+  );
+}
+
+window.addEventListener('load', initNaverMap);
 </script>
 </body>
 </html>
