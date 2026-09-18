@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
-
 <title>재민과 다연 모바일 청첩장</title>
-
 <meta property="og:type" content="website">
 <meta property="og:title" content="재민🤵🏻🤍👰🏻‍♀️다연 결혼합니다.">
 <meta property="og:description" content="2026. 12. 05 SAT AM11:10 더뉴컨벤션">
@@ -18,21 +16,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,500;1,500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-@font-face{
-  font-family:'Spoqa Han Sans';
-  font-weight:400;
-  font-style:normal;
-  font-display:swap;
-  src:url('fonts/SpoqaHanSansRegular.woff2') format('woff2');
-}
-
-@font-face{
-  font-family:'Spoqa Han Sans';
-  font-weight:700;
-  font-style:normal;
-  font-display:swap;
-  src:url('fonts/SpoqaHanSansBold.woff2') format('woff2');
-}
+@font-face{font-family:'Spoqa Han Sans';font-weight:400;font-style:normal;font-display:swap;src:url('fonts/SpoqaHanSansRegular.woff2') format('woff2')}
+@font-face{font-family:'Spoqa Han Sans';font-weight:700;font-style:normal;font-display:swap;src:url('fonts/SpoqaHanSansBold.woff2') format('woff2')}
 
 :root{
   --bg:#faf8f5;
@@ -46,34 +31,29 @@
   --accent-soft:#efece6;
   --serif:'Spoqa Han Sans',sans-serif;
   --sans:'Spoqa Han Sans',sans-serif;
-  --nav-h:82px;
+  --nav-h:82px
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
-html,
-body{
+html,body{
   width:100%;
   height:100%;
   background:#fdfdfd;
   color:var(--ink);
   font-family:var(--sans);
   overflow:hidden;
-  -webkit-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%
 }
 
 body{
   display:flex;
-  justify-content:center;
+  justify-content:center
 }
 
 a{
   color:inherit;
-  text-decoration:none;
+  text-decoration:none
 }
 
 button{
@@ -81,42 +61,40 @@ button{
   cursor:pointer;
   border:0;
   background:none;
-  color:inherit;
+  color:inherit
 }
 
-/* 전체 앱 */
 .app{
   width:100%;
   max-width:480px;
-  height:100vh;
+  height:100dvh;
   position:relative;
   overflow:hidden;
-  box-shadow:0 0 40px rgba(0,0,0,.5);
+  box-shadow:0 0 40px rgba(0,0,0,.5)
 }
 
-/* 일반 페이지 */
 .page{
   display:none;
   height:calc(100dvh - var(--nav-h));
   overflow-y:auto;
   padding-bottom:24px;
   background:#fdfdfd;
-  scrollbar-width:none;
+  scrollbar-width:none
 }
 
 .page::-webkit-scrollbar{
-  display:none;
+  display:none
 }
 
 .page.active{
   display:block;
   position:relative;
   z-index:2;
-  pointer-events:auto;
+  pointer-events:auto
 }
 
 .page:not(#home){
-  padding:30px 22px 28px;
+  padding:30px 22px 28px
 }
 
 .page-title{
@@ -124,13 +102,13 @@ button{
   font-size:24px;
   line-height:1.12;
   letter-spacing:-.05em;
-  margin-bottom:8px;
+  margin-bottom:8px
 }
 
 .line{
   height:1px;
   background:var(--line);
-  margin:24px 0;
+  margin:24px 0
 }
 
 .btn{
@@ -141,23 +119,23 @@ button{
   align-items:center;
   justify-content:center;
   font-size:14px;
-  font-weight:700;
+  font-weight:700
 }
 
 .btn.dark{
   background:var(--accent);
   color:var(--accent-ink);
-  border-color:var(--accent);
+  border-color:var(--accent)
 }
 
 .btn-row{
   display:grid;
   gap:10px;
-  margin-top:16px;
+  margin-top:16px
 }
 
-/* 하단 메뉴 */
 .bottom-nav{
+  pointer-events:auto!important;
   position:absolute!important;
   left:0;
   right:0;
@@ -168,11 +146,12 @@ button{
   grid-template-columns:repeat(5,1fr);
   padding:8px 8px max(8px,env(safe-area-inset-bottom));
   gap:4px;
-  z-index:1000;
-  pointer-events:auto!important;
+  z-index:1000
 }
 
 .nav-btn{
+  pointer-events:auto!important;
+  touch-action:manipulation;
   display:flex;
   position:relative;
   z-index:1001;
@@ -182,9 +161,7 @@ button{
   gap:4px;
   color:#838383;
   font-size:calc(11px * var(--fs));
-  white-space:nowrap;
-  pointer-events:auto!important;
-  touch-action:manipulation;
+  white-space:nowrap
 }
 
 .nav-btn svg{
@@ -194,89 +171,83 @@ button{
   fill:none;
   stroke-width:1.8;
   stroke-linecap:round;
-  stroke-linejoin:round;
+  stroke-linejoin:round
 }
 
 .nav-btn.active{
   color:#221f1c;
-  font-weight:700;
+  font-weight:700
 }
 
 body.home-active .nav-btn{
-  color:rgba(255,255,255,.72)!important;
+  color:rgba(255,255,255,.72)!important
 }
 
 body.home-active .nav-btn.active{
-  color:#fff!important;
+  color:#fff!important
 }
 
-/* 지도 */
-.map-card,
-.parking-info,
-.parking-item{
+.map-card,.parking-info,.parking-item{
   border:0;
-  background:transparent;
+  background:transparent
 }
 
 .map-embed{
   height:260px;
   position:relative;
-  overflow:hidden;
+  overflow:hidden
 }
 
 .map-embed iframe{
   width:100%;
   height:calc(100% + 24px);
   border:0;
-  position:absolute;
+  position:absolute
 }
 
 .map-bottom{
   padding:22px 0;
   font-size:calc(14px * var(--fs));
-  line-height:1.5;
+  line-height:1.5
 }
 
 .map-bottom h3{
   font-size:calc(18px * var(--fs));
-  margin-bottom:10px;
+  margin-bottom:10px
 }
 
 .map-bottom b{
   display:block;
-  color:transparent;
+  color:transparent
 }
 
 .subway-info{
   display:block;
   margin-top:-12px;
-  line-height:1.2;
+  line-height:1.2
 }
 
 .parking-info{
-  padding:20px 0;
+  padding:20px 0
 }
 
-.parking-info h3,
-.parking-item b{
+.parking-info h3,.parking-item b{
   font-size:calc(20px * var(--fs));
-  font-weight:700;
+  font-weight:700
 }
 
-.parking-info p,
-.parking-item p{
+.parking-info p,.parking-item p{
   font-size:calc(12px * var(--fs));
   color:var(--muted);
-  line-height:1.7;
+  line-height:1.7
 }
 
 .parking-list{
   display:grid;
   gap:10px;
-  margin-top:16px;
+  margin-top:16px
 }
 
-/* 갤러리 */
 .coverflow{
   position:relative;
   height:64vh;
@@ -288,22 +259,22 @@ body.home-active .nav-btn.active{
   scroll-snap-type:x mandatory;
   -webkit-overflow-scrolling:touch;
   scrollbar-width:none;
-  cursor:grab;
+  cursor:grab
 }
 
 .coverflow::-webkit-scrollbar{
-  display:none;
+  display:none
 }
 
 .coverflow.dragging{
   cursor:grabbing;
-  scroll-snap-type:none;
+  scroll-snap-type:none
 }
 
 .coverflow-track{
   display:flex;
   align-items:center;
-  height:100%;
+  height:100%
 }
 
 .cf-card{
@@ -318,7 +289,7 @@ body.home-active .nav-btn.active{
   margin-right:-5px;
   transform-origin:center;
   transition:transform .15s ease-out,opacity .15s ease-out;
-  user-select:none;
+  user-select:none
 }
 
 .cf-card img{
@@ -326,18 +297,18 @@ body.home-active .nav-btn.active{
   height:100%;
   object-fit:cover;
   pointer-events:none;
-  display:block;
+  display:block
 }
 
 .coverflow-footer{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  margin-top:16px;
+  margin-top:16px
 }
 
 .coverflow-counter{
-  display:none!important;
+  display:none!important
 }
 
 .view-all-link{
@@ -346,14 +317,14 @@ body.home-active .nav-btn.active{
   right:24px;
   font-size:calc(13px * var(--fs));
   font-weight:700;
-  z-index:10;
+  z-index:10
 }
 
 .gallery-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:8px;
-  margin-top:20px;
+  margin-top:20px
 }
 
 .g-item{
@@ -361,17 +332,16 @@ body.home-active .nav-btn.active{
   background:var(--soft);
   border-radius:0;
   position:relative;
-  overflow:hidden;
+  overflow:hidden
 }
 
 .g-item img{
   width:100%;
   height:100%;
   object-fit:cover;
-  display:block;
+  display:block
 }
 
-/* 라이트박스 */
 .lightbox{
   position:absolute;
   inset:0;
@@ -382,11 +352,11 @@ body.home-active .nav-btn.active{
   justify-content:center;
   padding:20px;
   touch-action:none;
-  overscroll-behavior:none;
+  overscroll-behavior:none
 }
 
 .lightbox.show{
-  display:flex;
+  display:flex
 }
 
 .lightbox img{
@@ -396,7 +366,7 @@ body.home-active .nav-btn.active{
   border-radius:0;
   touch-action:none;
   user-select:none;
-  -webkit-user-drag:none;
+  -webkit-user-drag:none
 }
 
 .lightbox .close{
@@ -405,41 +375,38 @@ body.home-active .nav-btn.active{
   right:20px;
   color:#fff;
   font-size:calc(34px * var(--fs));
-  z-index:2;
+  z-index:2
 }
 
-/* 안내 */
 .guide-grid{
   display:grid;
-  margin-top:10px;
+  margin-top:10px
 }
 
 .guide-card-head{
   display:flex;
   align-items:center;
-  height:64px;
+  height:64px
 }
 
 .guide-card-text h3{
   font-size:calc(16px * var(--fs));
-  font-weight:700;
+  font-weight:700
 }
 
 .guide-card-detail{
-  padding:0 0 20px;
+  padding:0 0 20px
 }
 
-.guide-detail-text,
-.gift-intro p{
+.guide-detail-text,.gift-intro p{
   font-size:calc(14px * var(--fs));
   line-height:1.7;
-  color:var(--muted);
+  color:var(--muted)
 }
 
-/* 마음 */
 .gift-choice{
   display:grid;
-  margin-top:10px;
+  margin-top:10px
 }
 
 .gift-toggle{
@@ -449,7 +416,7 @@ body.home-active .nav-btn.active{
   font-weight:700;
   display:flex;
   align-items:center;
-  justify-content:space-between;
+  justify-content:space-between
 }
 
 .gift-toggle .guide-chevron{
@@ -458,21 +425,21 @@ body.home-active .nav-btn.active{
   fill:none;
   stroke:var(--ink);
   stroke-width:1.8;
-  transition:transform .25s;
+  transition:transform .25s
 }
 
 .gift-toggle .guide-chevron.open{
-  transform:rotate(90deg);
+  transform:rotate(90deg)
 }
 
 .gift-panel{
   max-height:0;
   overflow:hidden;
-  transition:max-height .3s;
+  transition:max-height .3s
 }
 
 .gift-panel.open{
-  max-height:300px;
+  max-height:300px
 }
 
 .gift-row{
@@ -481,34 +448,33 @@ body.home-active .nav-btn.active{
   justify-content:space-between;
   gap:12px;
   border-bottom:1px solid var(--line);
-  padding:18px 0;
+  padding:18px 0
 }
 
 .gift-who{
-  flex:1;
+  flex:1
 }
 
 .gift-who b{
   display:block;
   font-size:calc(15px * var(--fs));
-  margin-bottom:3px;
+  margin-bottom:3px
 }
 
 .gift-who span{
   font-size:calc(13px * var(--fs));
-  color:var(--muted);
+  color:var(--muted)
 }
 
 .gift-copy{
   height:34px;
-  padding:0 12px;
+  padding:0 12px
 }
 
 .gift-heart{
-  display:none;
+  display:none
 }
 
-/* 글자 크기 */
 .fontsize-toggle{
   position:absolute;
   right:14px;
@@ -524,86 +490,73 @@ body.home-active .nav-btn.active{
   font-size:9.5px;
   z-index:60;
   box-shadow:0 4px 16px rgba(0,0,0,.12);
-  border:1.5px solid rgba(0,0,0,.15);
+  border:1.5px solid rgba(0,0,0,.15)
 }
 
 .fontsize-toggle b{
-  font-size:16px;
+  font-size:16px
 }
 
 body.big{
-  --fs:1.32;
+  --fs:1.32
 }
 
-/* =========================
-   HOME
-   ========================= */
-
+/* 홈 */
 #home{
   position:absolute!important;
   inset:0!important;
   width:100%!important;
-  height:100vh!important;
+  height:100dvh!important;
   overflow:hidden!important;
   background:#000!important;
-  color:#fff;
-  pointer-events:none!important;
+  color:#fff!important;
+  pointer-events:none!important
 }
 
 #home:not(.active){
   display:none!important;
   visibility:hidden!important;
-  pointer-events:none!important;
+  pointer-events:none!important
 }
 
 #home.active{
   display:block!important;
   visibility:visible!important;
-  pointer-events:none!important;
+  pointer-events:none!important
 }
 
 .home-inner{
   position:relative;
   width:100%;
   height:100%;
-  text-align:center;
+  text-align:center
 }
 
-/*
-  영상은 화면 높이에 맞춘다.
-  width:auto로 원본 비율을 유지한다.
-  위/아래 원본 프레임은 자르지 않는다.
-  화면비 차이는 좌우에서 처리한다.
-*/
 .video-frame{
   position:absolute;
   inset:0;
-  overflow:hidden;
-  background:#000;
+  overflow:hidden
 }
 
+/* 영상 전체 화면 채우기 */
 .video-frame .bg-video{
   position:absolute;
-  top:0;
-  left:50%;
-  width:auto;
+  inset:0;
+  width:100%;
   height:100%;
-  max-width:none;
-  transform:translateX(-50%);
-  display:block;
+  object-fit:cover
 }
 
-/* 홈 텍스트 */
 .save-the-date{
   position:absolute!important;
   top:max(55px,calc(env(safe-area-inset-top) + 25px));
   left:50%;
   transform:translateX(-50%);
-  z-index:3;
+  z-index:3
 }
 
 .save-the-date svg{
-  width:clamp(160px,46vw,200px);
+  width:clamp(160px,46vw,200px)
 }
 
 .save-the-date text{
@@ -611,7 +564,7 @@ body.big{
   font-size:clamp(16px,4.2vw,20px);
   font-weight:800;
   letter-spacing:2px;
-  fill:#fff;
+  fill:#fff
 }
 
 .home-names{
@@ -623,7 +576,7 @@ body.big{
   width:100%;
   font-family:'Alex Brush',cursive;
   font-size:clamp(27px,min(8vw,4.6dvh),34px);
-  white-space:nowrap;
+  white-space:nowrap
 }
 
 .home-secondary{
@@ -633,18 +586,18 @@ body.big{
   transform:translateX(-50%);
   z-index:3;
   width:100%;
-  max-width:280px;
+  max-width:280px
 }
 
 .home-secondary p{
   font-size:clamp(13px,min(3.4vw,2dvh),15px);
   line-height:1.5;
   color:rgba(255,255,255,.78);
-  white-space:nowrap;
+  white-space:nowrap
 }
 
 .home-secondary b{
-  color:#fff;
+  color:#fff
 }
 
 .home-countdown{
@@ -656,14 +609,14 @@ body.big{
   width:100%;
   display:flex;
   flex-direction:column;
-  align-items:center;
+  align-items:center
 }
 
 .home-countdown-label{
   font-family:'Space Grotesk',sans-serif;
   font-size:clamp(10px,min(2.7vw,1.6dvh),12px);
   letter-spacing:.14em;
-  color:rgba(255,255,255,.78);
+  color:rgba(255,255,255,.78)
 }
 
 .home-countdown-value{
@@ -671,9 +624,8 @@ body.big{
   font-size:clamp(14px,min(3.8vw,2.2dvh),16px);
   font-weight:600;
   letter-spacing:.05em;
-  margin-top:4px;
+  margin-top:4px
 }
-
 </style>
 
 <script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=r5os5hgybf&submodules=geocoder"></script>
@@ -684,300 +636,245 @@ body.big{
 <div class="app">
 
 <section class="page active" id="home">
-  <div class="home-inner">
+<div class="home-inner">
 
-    <div class="save-the-date">
-      <svg viewBox="0 0 220 34" width="200" height="30" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <path id="arcPath" d="M8 32 Q110 2 212 32" fill="none"/>
-        <text text-anchor="middle">
-          <textPath href="#arcPath" xlink:href="#arcPath" startOffset="50%">SAVE THE DATE</textPath>
-        </text>
-      </svg>
-    </div>
+<div class="save-the-date">
+<svg viewBox="0 0 220 34" width="200" height="30" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path id="arcPath" d="M8 32 Q110 2 212 32" fill="none"/>
+<text text-anchor="middle">
+<textPath href="#arcPath" xlink:href="#arcPath" startOffset="50%">SAVE THE DATE</textPath>
+</text>
+</svg>
+</div>
 
-    <div class="video-frame">
-      <video
-        class="bg-video"
-        id="bgVideo"
-        autoplay
-        muted
-        loop
-        playsinline
-        poster="video/poster.jpg"
-      >
-        <source src="video/main.mp4" type="video/mp4">
-      </video>
-    </div>
+<div class="video-frame">
+<video class="bg-video" id="bgVideo" autoplay muted loop playsinline poster="video/poster.jpg">
+<source src="video/main.mp4" type="video/mp4">
+</video>
+</div>
 
-    <div class="home-names">
-      Jaemin and Dayeon
-    </div>
+<div class="home-names">Jaemin and Dayeon</div>
 
-    <div class="home-secondary">
-      <p>김병기&nbsp; 이양자의&nbsp; 장남&nbsp;&nbsp;<b> 재민</b></p>
-      <p>이민성&nbsp; 문영애의&nbsp; 장녀&nbsp;&nbsp;<b> 다연</b></p>
-    </div>
+<div class="home-secondary">
+<p>김병기&nbsp; 이양자의&nbsp; 장남&nbsp;&nbsp;<b> 재민</b></p>
+<p>이민성&nbsp; 문영애의&nbsp; 장녀&nbsp;&nbsp;<b> 다연</b></p>
+</div>
 
-    <div class="home-countdown">
-      <span class="home-countdown-label">
-        2026. 12. 05 · SAT · AM 11:10
-      </span>
-      <span class="home-countdown-value">
-        더뉴컨벤션 1층 르노브홀
-      </span>
-    </div>
+<div class="home-countdown">
+<span class="home-countdown-label">2026. 12. 05 · SAT · AM 11:10</span>
+<span class="home-countdown-value">더뉴컨벤션 1층 르노브홀</span>
+</div>
 
-  </div>
+</div>
 </section>
-
 
 <section class="page" id="location">
 
-  <h2 class="page-title">오시는 길</h2>
+<h2 class="page-title">오시는 길</h2>
 
-  <div class="map-card">
-    <div class="map-embed" id="naverMap"></div>
+<div class="map-card">
 
-    <div class="map-bottom">
-      <h3>더뉴컨벤션 1층 르노브홀</h3>
-      서울 강서구 공항대로36길 57 내발산동 655-2<br>
-      TEL. 1661-3303
+<div class="map-embed" id="naverMap"></div>
 
-      <b>지하철</b>
+<div class="map-bottom">
+<h3>더뉴컨벤션 1층 르노브홀</h3>
+서울 강서구 공항대로36길 57 내발산동 655-2<br>
+TEL. 1661-3303
+<b>지하철</b>
+<span class="subway-info">5호선 발산역 하차 7번 출구 도보 2분</span>
+</div>
 
-      <span class="subway-info">
-        5호선 발산역 하차 7번 출구 도보 2분
-      </span>
-    </div>
-  </div>
+</div>
 
-  <div class="btn-row" style="grid-template-columns:1fr 1fr 1fr">
-    <a class="btn dark" target="_blank" href="https://map.kakao.com/link/search/더뉴컨벤션">카카오맵</a>
-    <a class="btn" target="_blank" href="https://map.naver.com/v5/search/더뉴컨벤션">네이버맵</a>
-    <a class="btn" href="tmap://search?name=더뉴컨벤션">티맵</a>
-  </div>
+<div class="btn-row" style="grid-template-columns:1fr 1fr 1fr">
+<a class="btn dark" target="_blank" href="https://map.kakao.com/link/search/더뉴컨벤션">카카오맵</a>
+<a class="btn" target="_blank" href="https://map.naver.com/v5/search/더뉴컨벤션">네이버맵</a>
+<a class="btn" href="tmap://search?name=더뉴컨벤션">티맵</a>
+</div>
 
-  <div class="line"></div>
+<div class="line"></div>
 
-  <h2 class="page-title">주차 안내</h2>
+<h2 class="page-title">주차 안내</h2>
 
-  <div class="parking-info">
-    <h3>2시간 무료 주차</h3>
-    <p>
-      더뉴컨벤션 B4 ~ F1 주차장 이용<br>
-      약 720대 주차 가능
-    </p>
-  </div>
+<div class="parking-info">
+<h3>2시간 무료 주차</h3>
+<p>
+더뉴컨벤션 B4 ~ F1 주차장 이용<br>
+약 720대 주차 가능
+</p>
+</div>
 
-  <div class="parking-list">
-    <div class="parking-item">
-      <b>만차 시</b>
-      <p>
-        건너편 이대서울병원 주차장을 이용해 주세요.<br>
-        동일하게 2시간 무료 주차 지원됩니다.
-      </p>
-    </div>
-  </div>
+<div class="parking-list">
+<div class="parking-item">
+<b>만차 시</b>
+<p>
+건너편 이대서울병원 주차장을 이용해 주세요.<br>
+동일하게 2시간 무료 주차 지원됩니다.
+</p>
+</div>
+</div>
 
 </section>
-
 
 <section class="page" id="gallery">
 
-  <h2 class="page-title">갤러리</h2>
+<h2 class="page-title">갤러리</h2>
 
-  <div class="coverflow" id="coverflow">
-    <div class="coverflow-track" id="coverflowTrack"></div>
-  </div>
+<div class="coverflow" id="coverflow">
+<div class="coverflow-track" id="coverflowTrack"></div>
+</div>
 
-  <div class="coverflow-footer">
-    <div class="coverflow-counter" id="coverflowCounter"></div>
+<div class="coverflow-footer">
+<div class="coverflow-counter" id="coverflowCounter"></div>
+<button class="view-all-link" id="viewAllBtn" onclick="toggleGalleryView()">VIEW ALL →</button>
+</div>
 
-    <button
-      class="view-all-link"
-      id="viewAllBtn"
-      onclick="toggleGalleryView()"
-    >
-      VIEW ALL →
-    </button>
-  </div>
-
-  <div
-    class="gallery-grid"
-    id="galleryGrid"
-    style="display:none"
-  ></div>
+<div class="gallery-grid" id="galleryGrid" style="display:none"></div>
 
 </section>
-
 
 <section class="page" id="guide">
 
-  <h2 class="page-title">INFO</h2>
+<h2 class="page-title">INFO</h2>
 
-  <div class="guide-grid">
+<div class="guide-grid">
 
-    <div class="guide-card">
-      <div class="guide-card-head">
-        <div class="guide-card-text">
-          <h3>식사 안내</h3>
-        </div>
-      </div>
+<div class="guide-card">
+<div class="guide-card-head">
+<div class="guide-card-text">
+<h3>식사 안내</h3>
+</div>
+</div>
 
-      <div class="guide-card-detail">
-        <p class="guide-detail-text">
-          예식 전 오전 10시 30분부터 3층 연회장에서 식사가 가능합니다.
-        </p>
-      </div>
-    </div>
+<div class="guide-card-detail">
+<p class="guide-detail-text">
+예식 전 오전 10시 30분부터 3층 연회장에서 식사가 가능합니다.
+</p>
+</div>
+</div>
 
-    <div class="guide-card">
-      <div class="guide-card-head">
-        <div class="guide-card-text">
-          <h3>주차 안내</h3>
-        </div>
-      </div>
+<div class="guide-card">
+<div class="guide-card-head">
+<div class="guide-card-text">
+<h3>주차 안내</h3>
+</div>
+</div>
 
-      <div class="guide-card-detail">
-        <p class="guide-detail-text">
-          더뉴컨벤션 하객은 별도의 차량번호 등록이나 정산 절차 없이
-          2시간 무료 출차가 가능합니다.<br>
-          만차 시 건너편 이대서울병원 주차장을 이용해 주세요.
-        </p>
-      </div>
-    </div>
+<div class="guide-card-detail">
+<p class="guide-detail-text">
+더뉴컨벤션 하객은 별도의 차량번호 등록이나 정산 절차 없이 2시간 무료 출차가 가능합니다.<br>
+만차 시 건너편 이대서울병원 주차장을 이용해 주세요.
+</p>
+</div>
+</div>
 
-  </div>
+</div>
 
 </section>
-
 
 <section class="page" id="heart">
 
-  <h2 class="page-title">마음 전하실 곳</h2>
+<h2 class="page-title">마음 전하실 곳</h2>
 
-  <div class="gift-choice">
+<div class="gift-choice">
 
-    <button class="gift-toggle" onclick="toggleGift('groom')">
-      신랑에게
-      <svg class="guide-chevron" id="groomChevron" viewBox="0 0 24 24">
-        <path d="M9 6l6 6-6 6"/>
-      </svg>
-    </button>
+<button class="gift-toggle" onclick="toggleGift('groom')">
+신랑에게
+<svg class="guide-chevron" id="groomChevron" viewBox="0 0 24 24">
+<path d="M9 6l6 6-6 6"/>
+</svg>
+</button>
 
-    <div class="gift-panel" id="giftGroom">
-      <div class="gift-row">
-        <div class="gift-who">
-          <b>[신랑 이름]</b>
-          <span>[은행명] 000-000-000000</span>
-        </div>
+<div class="gift-panel" id="giftGroom">
+<div class="gift-row">
+<div class="gift-who">
+<b>[신랑 이름]</b>
+<span>[은행명] 000-000-000000</span>
+</div>
+<button class="btn gift-copy" onclick="copyAccount('[은행명] 000-000-000000',this)">복사</button>
+</div>
+</div>
 
-        <button
-          class="btn gift-copy"
-          onclick="copyAccount('[은행명] 000-000-000000',this)"
-        >
-          복사
-        </button>
-      </div>
-    </div>
+<button class="gift-toggle" onclick="toggleGift('bride')">
+신부에게
+<svg class="guide-chevron" id="brideChevron" viewBox="0 0 24 24">
+<path d="M9 6l6 6-6 6"/>
+</svg>
+</button>
 
+<div class="gift-panel" id="giftBride">
+<div class="gift-row">
+<div class="gift-who">
+<b>[신부 이름]</b>
+<span>[은행명] 000-000-000000</span>
+</div>
+<button class="btn gift-copy" onclick="copyAccount('[은행명] 000-000-000000',this)">복사</button>
+</div>
+</div>
 
-    <button class="gift-toggle" onclick="toggleGift('bride')">
-      신부에게
-      <svg class="guide-chevron" id="brideChevron" viewBox="0 0 24 24">
-        <path d="M9 6l6 6-6 6"/>
-      </svg>
-    </button>
-
-    <div class="gift-panel" id="giftBride">
-      <div class="gift-row">
-        <div class="gift-who">
-          <b>[신부 이름]</b>
-          <span>[은행명] 000-000-000000</span>
-        </div>
-
-        <button
-          class="btn gift-copy"
-          onclick="copyAccount('[은행명] 000-000-000000',this)"
-        >
-          복사
-        </button>
-      </div>
-    </div>
-
-  </div>
+</div>
 
 </section>
 
-
 <div class="lightbox" id="lightbox">
-  <button class="close" onclick="closeLightbox()">×</button>
-  <img id="lightboxImg" alt="확대 사진">
+<button class="close" onclick="closeLightbox()">×</button>
+<img id="lightboxImg" alt="확대 사진">
 </div>
 
-
-<button
-  class="fontsize-toggle"
-  id="fontToggleBtn"
-  onclick="toggleBigFont()"
->
-  <b>가</b>
-  <span>큰글씨 보기</span>
+<button class="fontsize-toggle" id="fontToggleBtn" onclick="toggleBigFont()">
+<b>가</b>
+<span>큰글씨 보기</span>
 </button>
-
 
 <nav class="bottom-nav">
 
-  <button class="nav-btn active" data-page="home">
-    <svg viewBox="0 0 24 24">
-      <path d="M3 11.5L12 4l9 7.5"/>
-      <path d="M5 10.5V21h14V10.5"/>
-      <path d="M9.5 21v-6h5v6"/>
-    </svg>
-    <span>홈</span>
-  </button>
+<button class="nav-btn active" data-page="home">
+<svg viewBox="0 0 24 24">
+<path d="M3 11.5L12 4l9 7.5"/>
+<path d="M5 10.5V21h14V10.5"/>
+<path d="M9.5 21v-6h5v6"/>
+</svg>
+<span>홈</span>
+</button>
 
-  <button class="nav-btn" data-page="location">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/>
-      <circle cx="12" cy="9" r="2.5"/>
-    </svg>
-    <span>길찾기</span>
-  </button>
+<button class="nav-btn" data-page="location">
+<svg viewBox="0 0 24 24">
+<path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/>
+<circle cx="12" cy="9" r="2.5"/>
+</svg>
+<span>길찾기</span>
+</button>
 
-  <button class="nav-btn" data-page="gallery">
-    <svg viewBox="0 0 24 24">
-      <rect x="4" y="5" width="16" height="14" rx="1.5"/>
-      <path d="M7 16l4-4 3 3 2-2 3 3"/>
-      <circle cx="8.5" cy="8.5" r="1.2"/>
-    </svg>
-    <span>갤러리</span>
-  </button>
+<button class="nav-btn" data-page="gallery">
+<svg viewBox="0 0 24 24">
+<rect x="4" y="5" width="16" height="14" rx="1.5"/>
+<path d="M7 16l4-4 3 3 2-2 3 3"/>
+<circle cx="8.5" cy="8.5" r="1.2"/>
+</svg>
+<span>갤러리</span>
+</button>
 
-  <button class="nav-btn" data-page="guide">
-    <svg viewBox="0 0 24 24">
-      <path d="M6 3h9l4 4v14H6z"/>
-      <path d="M15 3v4h4"/>
-      <path d="M9 12h7M9 16h7M9 8h3"/>
-    </svg>
-    <span>안내</span>
-  </button>
+<button class="nav-btn" data-page="guide">
+<svg viewBox="0 0 24 24">
+<path d="M6 3h9l4 4v14H6z"/>
+<path d="M15 3v4h4"/>
+<path d="M9 12h7M9 16h7M9 8h3"/>
+</svg>
+<span>안내</span>
+</button>
 
-  <button class="nav-btn" data-page="heart">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 20.5s-7.5-4.6-9.8-9.2C.7 7.9 2.4 4.5 5.8 4c2-.3 3.7.7 4.9 2.3C12 4.7 13.7 3.7 15.7 4c3.4.5 5.1 3.9 3.6 7.3C17 15.9 12 20.5 12 20.5z"/>
-    </svg>
-    <span>마음</span>
-  </button>
+<button class="nav-btn" data-page="heart">
+<svg viewBox="0 0 24 24">
+<path d="M12 20.5s-7.5-4.6-9.8-9.2C.7 7.9 2.4 4.5 5.8 4c2-.3 3.7.7 4.9 2.3C12 4.7 13.7 3.7 15.7 4c3.4.5 5.1 3.9 3.6 7.3C17 15.9 12 20.5 12 20.5z"/>
+</svg>
+<span>마음</span>
+</button>
 
 </nav>
 
 </div>
 
-
 <script>
-
-/* 홈 영상 재생 */
 (function () {
   const video = document.getElementById('bgVideo');
   if (!video) return;
@@ -987,15 +884,10 @@ body.big{
   play();
 
   ['touchstart','click','scroll','pointerdown'].forEach(type => {
-    document.addEventListener(type, play, {
-      once:true,
-      passive:true
-    });
+    document.addEventListener(type,play,{once:true,passive:true});
   });
 })();
 
-
-/* 큰 글씨 */
 function toggleBigFont() {
   const on = document.body.classList.toggle('big');
   const btn = document.getElementById('fontToggleBtn');
@@ -1005,37 +897,24 @@ function toggleBigFont() {
     : '<b>가</b><span>큰글씨 보기</span>';
 }
 
-
 /* 하단 메뉴 */
 document.querySelectorAll('.nav-btn').forEach(btn => {
-
-  btn.addEventListener('click', function () {
-
+  btn.addEventListener('click',function () {
     const id = this.dataset.page;
     const target = document.getElementById(id);
 
     if (!target) return;
 
-    document
-      .querySelectorAll('.nav-btn')
-      .forEach(b => b.classList.remove('active'));
-
-    document
-      .querySelectorAll('.page')
-      .forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
 
     this.classList.add('active');
     target.classList.add('active');
 
-    document.body.classList.toggle(
-      'home-active',
-      id === 'home'
-    );
+    document.body.classList.toggle('home-active',id === 'home');
 
     if (id === 'gallery' && window.coverflow) {
-      requestAnimationFrame(() => {
-        window.coverflow.refresh();
-      });
+      requestAnimationFrame(() => window.coverflow.refresh());
     }
 
     if (id === 'location' && window.naver && naver.maps) {
@@ -1043,38 +922,23 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
         window.dispatchEvent(new Event('resize'));
       },100);
     }
-
   });
-
 });
-
 
 /* 갤러리 */
 const galleryPhotos = [
-  'images/photo01.jpeg',
-  'images/photo02.jpeg',
-  'images/photo03.jpeg',
-  'images/photo04.jpeg',
-  'images/photo05.jpeg',
-  'images/photo06.jpeg',
-  'images/photo07.jpeg',
-  'images/photo08.jpeg',
-  'images/photo09.jpeg',
-  'images/photo10.jpeg',
-  'images/photo11.jpeg',
-  'images/photo12.jpeg',
-  'images/photo13.jpeg',
-  'images/photo14.jpeg',
-  'images/photo15.jpeg'
+  'images/photo01.jpeg','images/photo02.jpeg','images/photo03.jpeg',
+  'images/photo04.jpeg','images/photo05.jpeg','images/photo06.jpeg',
+  'images/photo07.jpeg','images/photo08.jpeg','images/photo09.jpeg',
+  'images/photo10.jpeg','images/photo11.jpeg','images/photo12.jpeg',
+  'images/photo13.jpeg','images/photo14.jpeg','images/photo15.jpeg'
 ];
-
 
 const galleryGrid = document.getElementById('galleryGrid');
 
 galleryGrid.innerHTML = '';
 
 galleryPhotos.forEach((src,index) => {
-
   const item = document.createElement('button');
 
   item.className = 'g-item';
@@ -1087,40 +951,23 @@ galleryPhotos.forEach((src,index) => {
 
   item.appendChild(img);
 
-  item.addEventListener('click',() => {
-    openLightbox(index);
-  });
+  item.addEventListener('click',() => openLightbox(index));
 
   galleryGrid.appendChild(item);
-
 });
 
-
 /* 커버플로우 */
-const coverflowTrack =
-  document.getElementById('coverflowTrack');
+const coverflowTrack = document.getElementById('coverflowTrack');
 
 const coverflowItems = [
-  {
-    src:galleryPhotos[14],
-    realIndex:14
-  },
-
-  ...galleryPhotos.map((src,realIndex) => ({
-    src,
-    realIndex
-  })),
-
-  {
-    src:galleryPhotos[0],
-    realIndex:0
-  }
+  {src:galleryPhotos[14],realIndex:14},
+  ...galleryPhotos.map((src,realIndex) => ({src,realIndex})),
+  {src:galleryPhotos[0],realIndex:0}
 ];
 
 coverflowTrack.innerHTML = '';
 
 coverflowItems.forEach(({src,realIndex}) => {
-
   const card = document.createElement('div');
 
   card.className = 'cf-card';
@@ -1134,150 +981,77 @@ coverflowItems.forEach(({src,realIndex}) => {
 
   card.appendChild(img);
   coverflowTrack.appendChild(card);
-
 });
 
-
 window.coverflow = (() => {
-
-  const wrap =
-    document.getElementById('coverflow');
-
-  const cards =
-    Array.from(coverflowTrack.children);
-
-  const realTotal =
-    galleryPhotos.length;
-
-  const lastCloneIndex =
-    realTotal + 1;
+  const wrap = document.getElementById('coverflow');
+  const cards = Array.from(coverflowTrack.children);
+  const realTotal = galleryPhotos.length;
+  const lastCloneIndex = realTotal + 1;
 
   let activeIndex = 1;
   let cardWidth = 0;
-
   let touchStartX = 0;
   let touchStartIndex = 1;
-
   let mouseDown = false;
   let mouseStartX = 0;
   let mouseStartIndex = 1;
 
-
   function measure() {
-
     if (!wrap.clientWidth) return false;
 
-    cardWidth =
-      wrap.clientWidth * 0.82;
+    cardWidth = wrap.clientWidth * 0.82;
 
     cards.forEach(card => {
-      card.style.width =
-        cardWidth + 'px';
+      card.style.width = cardWidth + 'px';
     });
 
-    const side =
-      Math.max(
-        0,
-        (wrap.clientWidth - cardWidth) / 2
-      );
+    const side = Math.max(0,(wrap.clientWidth - cardWidth) / 2);
 
-    coverflowTrack.style.paddingLeft =
-      side + 'px';
-
-    coverflowTrack.style.paddingRight =
-      side + 'px';
+    coverflowTrack.style.paddingLeft = side + 'px';
+    coverflowTrack.style.paddingRight = side + 'px';
 
     return true;
   }
 
-
   function cardLeft(index) {
-
     const card = cards[index];
 
-    return (
-      card.offsetLeft -
-      (wrap.clientWidth - card.offsetWidth) / 2
-    );
+    return card.offsetLeft - (wrap.clientWidth - card.offsetWidth) / 2;
   }
 
-
   function updateScales() {
-
     if (!wrap.clientWidth) return;
 
-    const wrapRect =
-      wrap.getBoundingClientRect();
-
-    const center =
-      wrapRect.left +
-      wrapRect.width / 2;
-
-    const spacing =
-      Math.max(cardWidth - 5,1);
+    const wrapRect = wrap.getBoundingClientRect();
+    const center = wrapRect.left + wrapRect.width / 2;
+    const spacing = Math.max(cardWidth - 5,1);
 
     cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
 
-      const rect =
-        card.getBoundingClientRect();
+      const distance = Math.abs(
+        rect.left + rect.width / 2 - center
+      );
 
-      const distance =
-        Math.abs(
-          rect.left +
-          rect.width / 2 -
-          center
-        );
+      const t = Math.min(distance / spacing,1.6);
 
-      const t =
-        Math.min(
-          distance / spacing,
-          1.6
-        );
+      const scale = t <= 1
+        ? 1 - t * 0.12
+        : Math.max(0.68,0.88 - (t - 1) * 0.25);
 
-      const scale =
-        t <= 1
-          ? 1 - t * 0.12
-          : Math.max(
-              0.68,
-              0.88 -
-              (t - 1) * 0.25
-            );
+      const opacity = t <= 1
+        ? 1 - t * 0.4
+        : Math.max(0,0.6 - (t - 1) * 0.7);
 
-      const opacity =
-        t <= 1
-          ? 1 - t * 0.4
-          : Math.max(
-              0,
-              0.6 -
-              (t - 1) * 0.7
-            );
-
-      card.style.transform =
-        `scale(${scale})`;
-
-      card.style.opacity =
-        opacity;
-
-      card.style.zIndex =
-        String(
-          100 -
-          Math.round(t * 50)
-        );
-
+      card.style.transform = `scale(${scale})`;
+      card.style.opacity = opacity;
+      card.style.zIndex = String(100 - Math.round(t * 50));
     });
   }
 
-
-  function goTo(
-    index,
-    behavior='smooth'
-  ) {
-
-    if (
-      index < 0 ||
-      index > lastCloneIndex ||
-      !cards[index]
-    ) return;
+  function goTo(index,behavior='smooth') {
+    if (index < 0 || index > lastCloneIndex || !cards[index]) return;
 
     activeIndex = index;
 
@@ -1286,34 +1060,21 @@ window.coverflow = (() => {
       behavior
     });
 
-    requestAnimationFrame(
-      updateScales
-    );
+    requestAnimationFrame(updateScales);
 
     if (index === 0) {
-
       window.setTimeout(() => {
-
-        activeIndex =
-          realTotal;
+        activeIndex = realTotal;
 
         wrap.scrollTo({
           left:cardLeft(realTotal),
           behavior:'auto'
         });
 
-        requestAnimationFrame(
-          updateScales
-        );
-
+        requestAnimationFrame(updateScales);
       },360);
-
-    } else if (
-      index === lastCloneIndex
-    ) {
-
+    } else if (index === lastCloneIndex) {
       window.setTimeout(() => {
-
         activeIndex = 1;
 
         wrap.scrollTo({
@@ -1321,461 +1082,233 @@ window.coverflow = (() => {
           behavior:'auto'
         });
 
-        requestAnimationFrame(
-          updateScales
-        );
-
+        requestAnimationFrame(updateScales);
       },360);
     }
   }
 
-
-  function moveFrom(
-    startIndex,
-    direction
-  ) {
-
-    const next =
-      Math.max(
-        0,
-        Math.min(
-          lastCloneIndex,
-          startIndex + direction
-        )
-      );
+  function moveFrom(startIndex,direction) {
+    const next = Math.max(
+      0,
+      Math.min(lastCloneIndex,startIndex + direction)
+    );
 
     goTo(next);
   }
 
+  wrap.addEventListener('scroll',() => {
+    requestAnimationFrame(updateScales);
+  },{passive:true});
 
-  wrap.addEventListener(
-    'scroll',
-    () => {
-      requestAnimationFrame(
-        updateScales
-      );
-    },
-    {passive:true}
-  );
+  wrap.addEventListener('touchstart',event => {
+    touchStartX = event.changedTouches[0].clientX;
+    touchStartIndex = activeIndex;
+  },{passive:true});
 
+  wrap.addEventListener('touchend',event => {
+    const diff = event.changedTouches[0].clientX - touchStartX;
 
-  wrap.addEventListener(
-    'touchstart',
-    event => {
-
-      touchStartX =
-        event.changedTouches[0].clientX;
-
-      touchStartIndex =
-        activeIndex;
-
-    },
-    {passive:true}
-  );
-
-
-  wrap.addEventListener(
-    'touchend',
-    event => {
-
-      const diff =
-        event.changedTouches[0].clientX -
-        touchStartX;
-
-      if (Math.abs(diff) < 20) {
-
-        goTo(touchStartIndex);
-        return;
-      }
-
-      moveFrom(
-        touchStartIndex,
-        diff < 0 ? 1 : -1
-      );
-
-    },
-    {passive:true}
-  );
-
-
-  wrap.addEventListener(
-    'mousedown',
-    event => {
-
-      mouseDown = true;
-      mouseStartX = event.clientX;
-      mouseStartIndex = activeIndex;
-
-      wrap.classList.add(
-        'dragging'
-      );
-
-      event.preventDefault();
+    if (Math.abs(diff) < 20) {
+      goTo(touchStartIndex);
+      return;
     }
-  );
 
+    moveFrom(touchStartIndex,diff < 0 ? 1 : -1);
+  },{passive:true});
 
-  window.addEventListener(
-    'mouseup',
-    event => {
+  wrap.addEventListener('mousedown',event => {
+    mouseDown = true;
+    mouseStartX = event.clientX;
+    mouseStartIndex = activeIndex;
 
-      if (!mouseDown) return;
+    wrap.classList.add('dragging');
 
-      mouseDown = false;
+    event.preventDefault();
+  });
 
-      wrap.classList.remove(
-        'dragging'
-      );
+  window.addEventListener('mouseup',event => {
+    if (!mouseDown) return;
 
-      const diff =
-        event.clientX -
-        mouseStartX;
+    mouseDown = false;
 
-      if (Math.abs(diff) < 30) {
+    wrap.classList.remove('dragging');
 
-        goTo(mouseStartIndex);
-        return;
-      }
+    const diff = event.clientX - mouseStartX;
 
-      moveFrom(
-        mouseStartIndex,
-        diff < 0 ? 1 : -1
-      );
-
+    if (Math.abs(diff) < 30) {
+      goTo(mouseStartIndex);
+      return;
     }
-  );
 
+    moveFrom(mouseStartIndex,diff < 0 ? 1 : -1);
+  });
 
-  window.addEventListener(
-    'resize',
-    () => {
+  window.addEventListener('resize',() => {
+    if (!measure()) return;
 
-      if (!measure()) return;
-
-      requestAnimationFrame(
-        () => goTo(
-          activeIndex,
-          'auto'
-        )
-      );
-    }
-  );
-
+    requestAnimationFrame(() => goTo(activeIndex,'auto'));
+  });
 
   return {
-
     refresh() {
-
       if (!measure()) return;
 
       activeIndex = 1;
 
-      requestAnimationFrame(
-        () => goTo(
-          1,
-          'auto'
-        )
-      );
+      requestAnimationFrame(() => goTo(1,'auto'));
     }
-
   };
-
 })();
 
-
 function toggleGalleryView() {
+  const grid = document.getElementById('galleryGrid');
+  const coverflow = document.getElementById('coverflow');
+  const btn = document.getElementById('viewAllBtn');
 
-  const grid =
-    document.getElementById(
-      'galleryGrid'
-    );
-
-  const coverflow =
-    document.getElementById(
-      'coverflow'
-    );
-
-  const btn =
-    document.getElementById(
-      'viewAllBtn'
-    );
-
-  const gridIsVisible =
-    grid.style.display !== 'none';
+  const gridIsVisible = grid.style.display !== 'none';
 
   if (gridIsVisible) {
-
     grid.style.display = 'none';
     coverflow.style.display = 'flex';
+    btn.textContent = 'VIEW ALL →';
 
-    btn.textContent =
-      'VIEW ALL →';
-
-    requestAnimationFrame(() => {
-      window.coverflow.refresh();
-    });
-
+    requestAnimationFrame(() => window.coverflow.refresh());
   } else {
-
     grid.style.display = 'grid';
     coverflow.style.display = 'none';
-
-    btn.textContent =
-      '← BACK';
+    btn.textContent = '← BACK';
   }
 }
 
-
 /* 확대 사진 */
-const lightbox =
-  document.getElementById('lightbox');
-
-const lightboxImg =
-  document.getElementById('lightboxImg');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
 
 let lightboxIndex = 0;
 let lightboxStartX = 0;
 
-
 function showLightboxImage(index) {
+  lightboxIndex = (index + galleryPhotos.length) % galleryPhotos.length;
 
-  lightboxIndex =
-    (index + galleryPhotos.length) %
-    galleryPhotos.length;
-
-  lightboxImg.src =
-    galleryPhotos[lightboxIndex];
-
-  lightboxImg.alt =
-    '사진 ' +
-    (lightboxIndex + 1);
+  lightboxImg.src = galleryPhotos[lightboxIndex];
+  lightboxImg.alt = '사진 ' + (lightboxIndex + 1);
 }
-
 
 function openLightbox(index) {
-
   showLightboxImage(index);
-
-  lightbox.classList.add(
-    'show'
-  );
+  lightbox.classList.add('show');
 }
-
 
 function closeLightbox() {
-
-  lightbox.classList.remove(
-    'show'
-  );
+  lightbox.classList.remove('show');
 }
 
+lightbox.addEventListener('touchstart',event => {
+  lightboxStartX = event.changedTouches[0].clientX;
+},{passive:true});
 
-lightbox.addEventListener(
-  'touchstart',
-  event => {
+lightbox.addEventListener('touchend',event => {
+  const distance = event.changedTouches[0].clientX - lightboxStartX;
 
-    lightboxStartX =
-      event.changedTouches[0].clientX;
+  if (Math.abs(distance) < 50) return;
 
-  },
-  {passive:true}
-);
-
-
-lightbox.addEventListener(
-  'touchend',
-  event => {
-
-    const distance =
-      event.changedTouches[0].clientX -
-      lightboxStartX;
-
-    if (
-      Math.abs(distance) < 50
-    ) return;
-
-    showLightboxImage(
-      lightboxIndex +
-      (distance < 0 ? 1 : -1)
-    );
-
-  },
-  {passive:true}
-);
-
-
-lightbox.addEventListener(
-  'touchmove',
-  event => {
-
-    if (
-      event.touches.length > 1
-    ) {
-      event.preventDefault();
-    }
-
-  },
-  {passive:false}
-);
-
-
-[
-  'gesturestart',
-  'gesturechange',
-  'gestureend'
-].forEach(type => {
-
-  lightbox.addEventListener(
-    type,
-    event => event.preventDefault()
+  showLightboxImage(
+    lightboxIndex + (distance < 0 ? 1 : -1)
   );
+},{passive:true});
 
+lightbox.addEventListener('touchmove',event => {
+  if (event.touches.length > 1) {
+    event.preventDefault();
+  }
+},{passive:false});
+
+['gesturestart','gesturechange','gestureend'].forEach(type => {
+  lightbox.addEventListener(type,event => event.preventDefault());
 });
-
 
 /* 마음 전하실 곳 */
 function toggleGift(who) {
+  const panel = document.getElementById(
+    who === 'groom' ? 'giftGroom' : 'giftBride'
+  );
 
-  const panel =
-    document.getElementById(
-      who === 'groom'
-        ? 'giftGroom'
-        : 'giftBride'
-    );
-
-  const chevron =
-    document.getElementById(
-      who === 'groom'
-        ? 'groomChevron'
-        : 'brideChevron'
-    );
+  const chevron = document.getElementById(
+    who === 'groom' ? 'groomChevron' : 'brideChevron'
+  );
 
   panel.classList.toggle('open');
   chevron.classList.toggle('open');
 }
 
-
 function copyAccount(text,btn) {
-
   const done = () => {
+    const original = btn.textContent;
 
-    const original =
-      btn.textContent;
-
-    btn.textContent =
-      '복사됨';
+    btn.textContent = '복사됨';
 
     setTimeout(() => {
-      btn.textContent =
-        original;
+      btn.textContent = original;
     },1500);
   };
 
-
-  if (
-    navigator.clipboard &&
-    navigator.clipboard.writeText
-  ) {
-
+  if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard
       .writeText(text)
       .then(done)
       .catch(() => alert(text));
-
   } else {
-
     alert(text);
   }
 }
 
-
 /* 네이버 지도 */
 function initNaverMap() {
+  const mapElement = document.getElementById('naverMap');
 
-  const mapElement =
-    document.getElementById(
-      'naverMap'
-    );
-
-  if (
-    !mapElement ||
-    !window.naver ||
-    !naver.maps
-  ) return;
-
+  if (!mapElement || !window.naver || !naver.maps) return;
 
   naver.maps.Service.geocode(
     {
-      query:
-        '서울 강서구 공항대로36길 57'
+      query:'서울 강서구 공항대로36길 57'
     },
-
     function(status,response) {
-
-      if (
-        status !==
-        naver.maps.Service.Status.OK
-      ) {
-
-        console.error(
-          '네이버 지도 주소 검색 실패'
-        );
-
+      if (status !== naver.maps.Service.Status.OK) {
+        console.error('네이버 지도 주소 검색 실패');
         return;
       }
 
-
-      const result =
-        response.v2.addresses[0];
-
+      const result = response.v2.addresses[0];
 
       if (!result) {
-
-        console.error(
-          '더뉴컨벤션 주소를 찾지 못했습니다.'
-        );
-
+        console.error('더뉴컨벤션 주소를 찾지 못했습니다.');
         return;
       }
 
+      const position = new naver.maps.LatLng(
+        Number(result.y),
+        Number(result.x)
+      );
 
-      const position =
-        new naver.maps.LatLng(
-          Number(result.y),
-          Number(result.x)
-        );
-
-
-      const map =
-        new naver.maps.Map(
-          'naverMap',
-          {
-            center:position,
-            zoom:16,
-            zoomControl:false,
-            mapDataControl:false,
-            scaleControl:false,
-            logoControl:true
-          }
-        );
-
-
-      new naver.maps.Marker({
-        position,
-        map,
-        title:'더뉴컨벤션'
+      const map = new naver.maps.Map('naverMap',{
+        center:position,
+        zoom:16,
+        zoomControl:false,
+        mapDataControl:false,
+        scaleControl:false,
+        logoControl:true
       });
 
+      new naver.maps.Marker({
+        position:position,
+        map:map,
+        title:'더뉴컨벤션'
+      });
     }
   );
 }
 
-
-window.addEventListener(
-  'load',
-  initNaverMap
-);
-
+window.addEventListener('load',initNaverMap);
 </script>
 
 </body>
