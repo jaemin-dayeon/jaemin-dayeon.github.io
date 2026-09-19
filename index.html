@@ -184,7 +184,7 @@ button{
   gap:4px;
 
   /* 기본 상태 */
-  color:rgba(255,255,255,.68);
+  color:#888;
 
   font-size:calc(11px * var(--fs));
   white-space:nowrap;
@@ -209,17 +209,18 @@ button{
 
 /* 선택된 메뉴 */
 .nav-btn.active{
-  color:#fff!important;
+  color:#222!important;
   font-weight:700;
 }
 
 /* 홈에서도 동일 */
 body.home-active .nav-btn{
-  color:rgba(255,255,255,.68)!important;
+  color:rgba(255,255,255,.72)!important;
 }
 
 body.home-active .nav-btn.active{
   color:#fff!important;
+  font-weight:700;
 }
 
 .map-card,.parking-info,.parking-item{
