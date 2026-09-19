@@ -648,7 +648,7 @@ body.big{
   z-index:3;
   width:100%;
   font-family:'Alex Brush',cursive;
-  font-size:min(7.44vw,29px);
+  font-size:clamp(29px, 8vw, 32px);
   white-space:nowrap;
 }
 
@@ -663,8 +663,8 @@ body.big{
 }
 
 .home-secondary p{
-  font-size:calc(min(3.08vw,12px) * var(--fs));
-  line-height:1.55;
+  font-size:calc(clamp(13px, 3.6vw, 14px) * var(--fs));
+  line-height:1.5;
   color:rgba(255,255,255,.78);
   white-space:nowrap;
 }
@@ -692,7 +692,7 @@ body.big{
 
 .home-countdown-label{
   font-family:'Space Grotesk',sans-serif;
-  ffont-size:calc(min(2.56vw,10px) * var(--fs));
+  font-size:calc(clamp(11px, 3.08vw, 12px) * var(--fs));
   letter-spacing:.14em;
   color:rgba(255,255,255,.78);
   white-space:nowrap;
@@ -700,7 +700,7 @@ body.big{
 
 .home-countdown-value{
   font-family:'Space Grotesk',sans-serif;
-  font-size:calc(min(3.59vw,14px) * var(--fs));
+  font-size:calc(clamp(14px, 4.1vw, 16px) * var(--fs));
   font-weight:600;
   letter-spacing:.05em;
   margin-top:4px;
