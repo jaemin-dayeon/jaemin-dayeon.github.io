@@ -39,16 +39,18 @@
 html,body{
   width:100%;
   height:100%;
-  background:#fdfdfd;
+  margin:0;
+  padding:0;
+  background:#000;
   color:var(--ink);
   font-family:var(--sans);
   overflow:hidden;
-  -webkit-text-size-adjust:100%
+  -webkit-text-size-adjust:100%;
 }
 
 body{
   display:flex;
-  justify-content:center
+  justify-content:center;
 }
 
 a{
@@ -67,19 +69,28 @@ button{
 .app{
   width:100%;
   max-width:480px;
+
+  height:100vh;
   height:100dvh;
+  height:var(--app-height, 100dvh);
+
   position:relative;
   overflow:hidden;
-  box-shadow:0 0 40px rgba(0,0,0,.5)
+  background:#000;
+  box-shadow:0 0 40px rgba(0,0,0,.5);
 }
 
 .page{
   display:none;
+
+  height:calc(100vh - var(--nav-h));
+  height:calc(100svh - var(--nav-h));
   height:calc(100dvh - var(--nav-h));
+
   overflow-y:auto;
   padding-bottom:24px;
   background:#fdfdfd;
-  scrollbar-width:none
+  scrollbar-width:none;
 }
 
 .page::-webkit-scrollbar{
@@ -505,46 +516,83 @@ body.big{
 #home{
   position:absolute!important;
   inset:0!important;
+
   width:100%!important;
-  height:100dvh!important;
+  height:100%!important;
+
   overflow:hidden!important;
   background:#000!important;
   color:#fff!important;
-  pointer-events:none!important
+
+  padding:0!important;
+  margin:0!important;
+
+  pointer-events:none!important;
+}
+
+  overflow:hidden!important;
+  background:#000!important;
+  color:#fff!important;
+
+  padding:0!important;
+  margin:0!important;
+
+  pointer-events:none!important;
 }
 
 #home:not(.active){
   display:none!important;
   visibility:hidden!important;
-  pointer-events:none!important
+  pointer-events:none!important;
 }
 
 #home.active{
   display:block!important;
   visibility:visible!important;
-  pointer-events:none!important
+  pointer-events:none!important;
 }
 
 .home-inner{
-  position:relative;
+  position:absolute;
+  inset:0;
+
   width:100%;
   height:100%;
-  text-align:center
+
+  overflow:hidden;
+  text-align:center;
+  background:#000;
 }
 
 .video-frame{
   position:absolute;
   inset:0;
-  overflow:hidden
-}
-
-/* 영상 전체 화면 채우기 */
-.video-frame .bg-video{
-  position:absolute;
-  inset:0;
   width:100%;
   height:100%;
-  object-fit:cover
+  overflow:hidden;
+  background:#000;
+  z-index:0;
+}
+
+.video-frame .bg-video{
+  position:absolute;
+
+  /* 화면 정중앙 기준 */
+  top:50%;
+  left:50%;
+
+  width:100%;
+  height:100%;
+
+  /* 비율 유지 + 빈 공간 없이 화면 채우기 */
+  object-fit:cover;
+  object-position:center center;
+
+  transform:translate(-50%,-50%);
+
+  display:block;
+  max-width:none;
+  max-height:none;
 }
 
 .save-the-date{
@@ -875,6 +923,30 @@ TEL. 1661-3303
 </div>
 
 <script>
+  /* 실제 모바일 화면 높이 보정 */
+function setAppHeight() {
+  const height = window.visualViewport
+    ? window.visualViewport.height
+    : window.innerHeight;
+
+  document.documentElement.style.setProperty(
+    '--app-height',
+    `${height}px`
+  );
+}
+
+setAppHeight();
+
+window.addEventListener('resize', setAppHeight);
+
+window.addEventListener('orientationchange', () => {
+  setTimeout(setAppHeight, 100);
+});
+
+if (window.visualViewport) {
+  window.visualViewport.addEventListener('resize', setAppHeight);
+}
+  
 (function () {
   const video = document.getElementById('bgVideo');
   if (!video) return;
