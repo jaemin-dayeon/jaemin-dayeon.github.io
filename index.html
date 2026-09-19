@@ -86,25 +86,31 @@ button{
 .page{
   display:none;
 
-  height:calc(100vh - var(--nav-h));
-  height:calc(100svh - var(--nav-h));
-  height:calc(100dvh - var(--nav-h));
+  position:absolute;
+  top:0;
+  left:0;
 
+  width:100%;
+  height:calc(100% - var(--nav-h));
+
+  overflow-x:hidden;
   overflow-y:auto;
+
   padding-bottom:24px;
   background:#fdfdfd;
+
   scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
 }
 
 .page::-webkit-scrollbar{
-  display:none
+  display:none;
 }
 
 .page.active{
   display:block;
-  position:relative;
   z-index:2;
-  pointer-events:auto
+  pointer-events:auto;
 }
 
 .page:not(#home){
