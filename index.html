@@ -663,7 +663,7 @@ body.big{
 }
 
 .home-secondary p{
-  font-size:clamp(13px,min(3.4vw,2dvh),15px);
+  font-size:calc(clamp(13px,min(3.4vw,2dvh),15px) * var(--fs));
   line-height:1.5;
   color:rgba(255,255,255,.78);
   white-space:nowrap
@@ -687,14 +687,14 @@ body.big{
 
 .home-countdown-label{
   font-family:'Space Grotesk',sans-serif;
-  font-size:clamp(10px,min(2.7vw,1.6dvh),12px);
+  font-size:calc(clamp(10px,min(2.7vw,1.6dvh),12px) * var(--fs));
   letter-spacing:.14em;
   color:rgba(255,255,255,.78)
 }
 
 .home-countdown-value{
   font-family:'Space Grotesk',sans-serif;
-  font-size:clamp(14px,min(3.8vw,2.2dvh),16px);
+  font-size:calc(clamp(14px,min(3.8vw,2.2dvh),16px) * var(--fs));
   font-weight:600;
   letter-spacing:.05em;
   margin-top:4px
