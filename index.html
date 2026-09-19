@@ -151,28 +151,50 @@ button{
   left:0;
   right:0;
   bottom:0;
+
   height:var(--nav-h);
-  background:transparent!important;
+
+  /* 반투명 흰색 배경 */
+  background:rgba(255,255,255,.18)!important;
+
+  /* 뒤 영상이 은은하게 비치게 */
+  -webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(10px);
+
   display:grid;
   grid-template-columns:repeat(5,1fr);
+
   padding:8px 8px max(8px,env(safe-area-inset-bottom));
   gap:4px;
-  z-index:1000
+
+  z-index:1000;
 }
 
 .nav-btn{
   pointer-events:auto!important;
   touch-action:manipulation;
+
   display:flex;
   position:relative;
   z-index:1001;
+
   flex-direction:column;
   align-items:center;
   justify-content:center;
   gap:4px;
-  color:#838383;
+
+  /* 기본 상태 */
+  color:rgba(255,255,255,.68);
+
   font-size:calc(11px * var(--fs));
-  white-space:nowrap
+  white-space:nowrap;
+
+  /* 클릭 시 생기는 기본 배경/하이라이트 제거 */
+  background:transparent!important;
+  outline:none;
+  -webkit-tap-highlight-color:transparent;
+
+  transition:color .2s ease, opacity .2s ease;
 }
 
 .nav-btn svg{
@@ -182,20 +204,22 @@ button{
   fill:none;
   stroke-width:1.8;
   stroke-linecap:round;
-  stroke-linejoin:round
+  stroke-linejoin:round;
 }
 
+/* 선택된 메뉴 */
 .nav-btn.active{
-  color:#221f1c;
-  font-weight:700
+  color:#fff!important;
+  font-weight:700;
 }
 
+/* 홈에서도 동일 */
 body.home-active .nav-btn{
-  color:rgba(255,255,255,.72)!important
+  color:rgba(255,255,255,.68)!important;
 }
 
 body.home-active .nav-btn.active{
-  color:#fff!important
+  color:#fff!important;
 }
 
 .map-card,.parking-info,.parking-item{
