@@ -46,6 +46,7 @@ html,body{
   font-family:var(--sans);
   overflow:hidden;
   -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
   touch-action:manipulation;
 }
 
@@ -664,10 +665,10 @@ body.big{
 }
 
 .home-secondary p{
-  font-size:calc(clamp(13px,min(3.4vw,2dvh),15px) * var(--fs));
+  font-size:calc(14px * var(--fs));
   line-height:1.5;
   color:rgba(255,255,255,.78);
-  white-space:nowrap
+  white-space:nowrap;
 }
 
 .home-secondary b{
@@ -688,17 +689,19 @@ body.big{
 
 .home-countdown-label{
   font-family:'Space Grotesk',sans-serif;
-  font-size:calc(clamp(10px,min(2.7vw,1.6dvh),12px) * var(--fs));
+  font-size:calc(12px * var(--fs));
   letter-spacing:.14em;
-  color:rgba(255,255,255,.78)
+  color:rgba(255,255,255,.78);
+  white-space:nowrap;
 }
 
 .home-countdown-value{
   font-family:'Space Grotesk',sans-serif;
-  font-size:calc(clamp(14px,min(3.8vw,2.2dvh),16px) * var(--fs));
+  font-size:calc(16px * var(--fs));
   font-weight:600;
   letter-spacing:.05em;
-  margin-top:4px
+  margin-top:4px;
+  white-space:nowrap;
 }
 </style>
 
