@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
 <title>재민과 다연 모바일 청첩장</title>
 <meta property="og:type" content="website">
 <meta property="og:title" content="재민🤵🏻🤍👰🏻‍♀️다연 결혼합니다.">
@@ -46,6 +46,7 @@ html,body{
   font-family:var(--sans);
   overflow:hidden;
   -webkit-text-size-adjust:100%;
+  touch-action:manipulation;
 }
 
 body{
@@ -959,6 +960,32 @@ function setAppHeight() {
     `${height}px`
   );
 }
+
+  /* 브라우저 화면 확대 방지 */
+document.addEventListener('gesturestart', function(e) {
+  e.preventDefault();
+});
+
+document.addEventListener('gesturechange', function(e) {
+  e.preventDefault();
+});
+
+document.addEventListener('gestureend', function(e) {
+  e.preventDefault();
+});
+
+let lastTouchEnd = 0;
+
+document.addEventListener('touchend', function(e) {
+  const now = Date.now();
+
+  if (now - lastTouchEnd <= 300) {
+    e.preventDefault();
+  }
+
+  lastTouchEnd = now;
+}, { passive:false });
+  
 
 setAppHeight();
 
