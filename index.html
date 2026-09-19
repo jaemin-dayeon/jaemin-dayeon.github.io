@@ -22,6 +22,7 @@
 :root{
   --bg:#faf8f5;
   --fs:1;
+  --vw-scale:calc(100vw / 390);
   --ink:#242220;
   --muted:#a2a2a2;
   --line:rgba(0,0,0,.09);
@@ -633,7 +634,7 @@ body.big{
 
 .save-the-date text{
   font-family:'Playfair Display',serif;
-  font-size:18px;
+  font-size:min(4.1vw,16px);
   font-weight:800;
   letter-spacing:2px;
   fill:#fff;
@@ -647,7 +648,7 @@ body.big{
   z-index:3;
   width:100%;
   font-family:'Alex Brush',cursive;
-  font-size:32px;
+  font-size:min(7.44vw,29px);
   white-space:nowrap;
 }
 
@@ -662,8 +663,8 @@ body.big{
 }
 
 .home-secondary p{
-  font-size:calc(14px * var(--fs));
-  line-height:1.5;
+  font-size:calc(min(3.08vw,12px) * var(--fs));
+  line-height:1.55;
   color:rgba(255,255,255,.78);
   white-space:nowrap;
 }
@@ -691,7 +692,7 @@ body.big{
 
 .home-countdown-label{
   font-family:'Space Grotesk',sans-serif;
-  font-size:calc(12px * var(--fs));
+  ffont-size:calc(min(2.56vw,10px) * var(--fs));
   letter-spacing:.14em;
   color:rgba(255,255,255,.78);
   white-space:nowrap;
@@ -699,7 +700,7 @@ body.big{
 
 .home-countdown-value{
   font-family:'Space Grotesk',sans-serif;
-  font-size:calc(16px * var(--fs));
+  font-size:calc(min(3.59vw,14px) * var(--fs));
   font-weight:600;
   letter-spacing:.05em;
   margin-top:4px;
